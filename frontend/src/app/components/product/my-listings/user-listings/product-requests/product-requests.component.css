@@ -1,0 +1,51 @@
+.div1 {
+  
+    margin: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 1px solid #ddd; Border color */
+    padding: 30px;
+    /* Padding inside the border */
+    border-radius: 8px;
+    /* Rounded corners for the border */
+    max-width: 100%;
+    /* Ensures the container doesn't overflow its parent */
+    margin: 0 auto;
+    /* Centers the container horizontally */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the width */
+    background: #fff;
+    /* 3D Shadow Effect */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  
+  
+  }
+  
+  div {
+    margin: 10px;
+  
+  }
+  
+  h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    cursor: pointer;
+    transition: 1s ease;
+  }
+  
+  .div1 :hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s ease;
+  }

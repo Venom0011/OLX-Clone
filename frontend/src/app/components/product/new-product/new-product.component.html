@@ -1,0 +1,79 @@
+<form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+  
+
+  <div class="container">
+    <h2>Add New Listing</h2>
+    <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+      
+      <div class="form-group">
+        <label>Product Name</label>
+        <input type="text" formControlName="productName" id="productName" class="form-control">
+        <div *ngIf="addProductForm.get('productName')?.errors?.['required']  
+        && (addProductForm.get('productName').dirty || addProductForm.get('productName').touched)" class="text-danger">
+                      Product name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea formControlName="description" class="form-control"></textarea>
+         <div *ngIf="addProductForm.get('description')?.errors?.['required']  
+        && (addProductForm.get('description').dirty || addProductForm.get('description').touched)" class="text-danger">
+                      Description is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Price</label>
+        <input type="number" formControlName="price" class="form-control">
+         <div *ngIf="addProductForm.get('price')?.errors?.['required']  
+        && (addProductForm.get('price').dirty || addProductForm.get('price').touched)" class="text-danger">
+                      Price is required.
+        </div>
+      </div>
+       <div class="form-group">
+        <label>Locality</label>
+        <input type="text" formControlName="locality" class="form-control">
+         <div *ngIf="addProductForm.get('locality')?.errors?.['required']  
+        && (addProductForm.get('locality').dirty || addProductForm.get('locality').touched)" class="text-danger">
+                      Locality is required.
+        </div>
+      </div>
+       <div class="form-group">
+        <label>City</label>
+        <input type="text" formControlName="city" class="form-control">
+         <div *ngIf="addProductForm.get('city')?.errors?.['required']  
+        && (addProductForm.get('city').dirty || addProductForm.get('city').touched)" class="text-danger">
+                      City is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Added Date</label>
+        <input type="date" formControlName="addedDate" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Category</label>
+        <select formControlName="categoryName" class="form-control">
+          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+        </select>
+         <div *ngIf="addProductForm.get('categoryName')?.errors?.['required']  
+        && (addProductForm.get('categoryName').dirty || addProductForm.get('categoryName').touched)" class="text-danger">
+                      Category is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Product Image</label>
+        <input type="file" (change)="onFileSelected($event)" class="form-control-file" formControlName="image">
+         <div *ngIf="addProductForm.get('image')?.errors?.['required']  
+        && (addProductForm.get('image').dirty || addProductForm.get('image').touched)" class="text-danger">
+                      Image is required.
+        </div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary" [disabled]="addProductForm.invalid">Add Product</button>
+    </form>
+  </div>
+  
+
+  
+
+ 
+</form>

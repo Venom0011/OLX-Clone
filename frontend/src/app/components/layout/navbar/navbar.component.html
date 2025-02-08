@@ -1,0 +1,28 @@
+<mat-toolbar>
+  <span class="navbar-brand pointer" routerLink="/" ><img src="../../../assets/logo.png" alt="OLX logo"></span>
+
+  <div class="spacer"></div>
+    <div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+      <div class="search">
+        <input class="search_input" type="text" name="" (input)="updateSearch($event)" placeholder="Search here...">
+        <a href="#" class="search_icon"><i class="fa fa-search"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <a mat-raised-button color="accent" routerLink="/login" *ngIf="!loggedIn">Sign in</a>
+  <button mat-button [matMenuTriggerFor]="menu" *ngIf="loggedIn && isUser" class="btn btn-dark">
+  <fa-icon [icon]="user"></fa-icon>&nbsp;<fa-icon [icon]="caretDown"></fa-icon>
+</button>
+<a mat-button *ngIf="loggedIn">Hello {{loggedInUser | titlecase}} </a> 
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/userListings" >MyListing</button>
+  <button mat-menu-item routerLink="/addProduct">Add Listing</button>
+  <button mat-menu-item (click)="logout()" >Logout <fa-icon [icon]="signOut"></fa-icon></button>   
+</mat-menu>
+</div>
+</mat-toolbar>
+
+

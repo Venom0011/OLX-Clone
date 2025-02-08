@@ -1,0 +1,72 @@
+/* General card styling */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+    
+  }
+  
+  /* Styling for the title and details */
+  .card h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #555;
+  }
+  
+  /* Button styling */
+  .btn-primary {
+    background-color: black;
+    border-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    min-width: 10rem;
+    margin: 5px;
+  }
+  
+  .btn-primary:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .card {
+      margin: 1rem;
+    }
+  
+    .col-md-4,
+    .col-md-8 {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  
+    .card-body {
+      text-align: center;
+    }
+  }
+  

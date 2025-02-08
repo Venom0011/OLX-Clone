@@ -1,0 +1,13 @@
+.dropdown-toggle{
+    background: #f4f1f1;
+    color: black;
+    border: solid white 1px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.dropdown-item{
+    font-family: 'Times New Roman', Times, serif;
+}
+.dropdown-menu{
+    max-width: 5px;
+}

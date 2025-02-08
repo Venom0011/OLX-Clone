@@ -1,0 +1,32 @@
+<div class="heading" style="text-align: center;">
+    <h2><strong>MY LISTINGS</strong></h2>
+</div>
+<div class="showBtn">
+    <h2 *ngIf="toggle"><strong>Current Listings</strong></h2>
+    <h2 *ngIf="toggle=== false"><strong>Sold Listings</strong></h2>
+
+    <!-- <button  *ngIf="toggle" class="btn btn-primary" (click)="showSoldListings()">Show Sold Listings</button>
+    <button  *ngIf="toggle===false" class="btn btn-primary" (click)="showCurrentListings()">Show Current Listings</button> -->
+</div>
+    <div *ngIf="toggle">
+    <div class="div1">
+
+        <div *ngFor="let prod of products" >
+        <user-product-card [product] = "prod" (removeProduct)="onRemoveProduct($event)"></user-product-card>
+        </div>   
+    </div>
+
+</div>
+
+    <div *ngIf="toggle===false">
+    <div  class="div1">
+     
+        <div *ngFor="let prod of soldProducts">
+            <sold-product-card [product] = "prod" (removeProduct)="onRemoveProduct($event)"></sold-product-card>
+        </div>
+       
+
+    </div>
+
+    </div>
+

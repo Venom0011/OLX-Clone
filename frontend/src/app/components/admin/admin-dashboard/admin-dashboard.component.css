@@ -1,0 +1,46 @@
+.icon-size {
+  color: black;
+  font-size: 2rem; 
+}
+
+.icon-with-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-with-text .fa {
+  font-size: 3rem;
+  color: #007bff;  
+}
+
+.icon-with-text .text {
+  margin-top: 0.5rem;
+  font-size: 1rem;   
+  color: #6c757d;    
+}
+
+article .d-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+article h5 {
+  color: black;
+  margin-top: 0.5rem;
+}
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container h1, .container p{
+color: black;
+}

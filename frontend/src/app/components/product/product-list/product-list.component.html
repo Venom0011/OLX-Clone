@@ -1,0 +1,43 @@
+<div style="text-align: center;">
+    <h2><strong>Must See Featured Listings</strong></h2>
+    <br>
+</div>
+<div class="div1">
+    <div *ngFor="let prod of products" >
+        <product [product] = "prod" *ngIf= "searchText === '' || prod.productName.toLowerCase().includes(searchText.toLowerCase())"
+        ></product>
+    </div>   
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-end mr-5">
+     <li class="page-item pointer" [ngClass]="1==(currentPage$ | async)? ' disabled': ''" (click)="goToNextOrPreviousPage('backward')" >
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo; Previous</span>
+      </a>
+    </li>
+    <li class="page-item pointer" *ngFor="let item of [].constructor(productResponse.totalPages); let i=index;"
+    [ngClass]="i+1==(currentPage$ | async)? ' active': ''">
+        <a class="page-link" (click)="gotoPage(i+1)">
+            {{i+1}}
+        </a>
+    </li>
+   <li class="page-item pointer" [ngClass]="(productResponse.totalPages)==(currentPage$ | async)? ' disabled': ''" (click)="goToNextOrPreviousPage('forward')">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">Next &raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+ <!-- <div style="text-align: center;">
+    <h2><strong>Must See Featured Listings</strong></h2>
+    <br>
+</div>
+<div class="div1">
+    <div>
+        <img [src]="product.imageData | base64:product.imageData" [alt]="product.productName">
+    </div>   
+</div> -->
+

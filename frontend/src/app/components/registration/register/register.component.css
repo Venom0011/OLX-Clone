@@ -1,0 +1,13 @@
+.img-fluid {
+    margin-left: 96px;
+}
+
+.btn{
+    border: solid black 1px;
+    background-color: black;
+    color: white;
+}
+
+/* section{
+    font-family: 'Times New Roman', Times, serif;
+} */

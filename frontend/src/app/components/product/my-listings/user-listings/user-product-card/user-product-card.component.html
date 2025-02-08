@@ -1,0 +1,15 @@
+<div class="card">
+  <img src="{{product?.imageData | base64:product.imageData}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{product?.productName}}</h5>
+    <!-- <p class="card-text">{{product.description}}</p>
+     -->
+    <h6 class="price">Price: {{product?.price}}</h6>
+    <div class="btnCluster">
+    <a routerLink="/updateProductDetails/+{{product.id}}" class="btn btn-primary ">Update</a>
+    <a routerLink="/productRequests/+{{product.id}}" class="btn btn-primary ">Requests</a>
+    </div>
+    <a class="btn btn-primary" (click)="onRemove()">Remove</a>
+    
+  </div>
+</div>

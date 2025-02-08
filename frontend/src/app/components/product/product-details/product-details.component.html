@@ -1,0 +1,55 @@
+
+<a routerLink='' class="btn btn-secondary back-button">Back</a>
+<div class="product-details-container"> 
+    <div class="detailsContainer">
+    <div class="product-details-content">
+      <div class="product-image">
+        <img [src]="product.imageData |  base64:product.imageData" alt="{{ product?.productName }}" />
+      </div>
+      <div class="product-info">
+        <h1>{{ product?.productName }}</h1>
+        <p>{{ product?.description }}</p>
+        <h2>Price: ₹{{ product?.price | number:'1.2-2' }}</h2>
+        <span *ngIf="!isYourProduct">  
+          <button  class="contactBtn" (click)="openPopup()">Contact Seller</button>
+        </span>
+        <span *ngIf="isYourProduct">
+          <h2>It is your product</h2>
+        </span>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div
+class="modal"
+tabindex="-1"
+role="dialog"
+[ngStyle]="{'display':displayStyle}"> 
+<div class="modal-dialog" role="document"> 
+	<div class="modal-content"> 
+	<div class="modal-header"> 
+		<h4 class="modal-title">Seller Details</h4> 
+	</div> 
+<div class="modal-body" style="background-color:white;">
+  <div>
+    <span style="color:black; display:block; margin-bottom:5px;">Name: {{sellerData.firstName}} {{sellerData.lastName}}</span>
+    <span style="color:black; display:block; margin-bottom:5px;">Email: {{sellerData.email}}</span>
+    <span style="color:black; display:block; margin-bottom:5px;">Address: {{sellerData.address}}</span>
+  </div>
+</div>
+
+	<div class="modal-footer"> 
+		<button type="button" class="btn btn-danger"
+				(click)="closePopup()"> 
+		Close 
+		</button> 
+	</div> 
+	</div> 
+</div> 
+</div>
+
+

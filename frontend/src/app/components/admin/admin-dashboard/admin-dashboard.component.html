@@ -1,0 +1,98 @@
+<!-- main-content.component.html -->
+<!-- overlay to close sidebar on small screens -->
+<div
+  class="w-100 vh-100 position-fixed overlay d-none"
+  id="sidebar-overlay"
+></div>
+<!-- note: in the layout margin auto is the key as sidebar is fixed -->
+<div class="col-md-9 col-lg-10 ml-md-auto px-0">
+  <!-- top nav -->
+  <nav class="w-100 d-flex px-4 py-2 mb-4 shadow-sm">
+    <!-- close sidebar -->
+    <button class="btn py-0 d-lg-none" id="open-sidebar">
+      <span class="bi bi-list text-primary h3"></span>
+    </button>
+    <div class="dropdown ml-auto">
+      <button
+        class="btn py-0 d-flex align-items-center"
+        id="logout-dropdown"
+        data-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <span class="bi bi-person text-primary h4"></span>
+        <span class="bi bi-chevron-down ml-1 mb-2 small"></span>
+      </button>
+      <div
+        class="dropdown-menu dropdown-menu-right border-0 shadow-sm"
+        aria-labelledby="logout-dropdown"
+      >
+        <a class="dropdown-item" href="#">Logout</a>
+        <a class="dropdown-item" href="#">Settings</a>
+      </div>
+    </div>
+  </nav>
+  <!-- main content -->
+  <main class="container-fluid">
+    <section class="row">
+      <div class="col-md-6 col-lg-4">
+        <!-- card -->
+        <article
+          class="p-4 rounded shadow-sm border-left mb-4 d-flex justify-content-center align-items-center"
+        >
+          <a class="d-flex flex-column align-items-center">
+            <fa-icon [icon]="cart" class="icon-size"></fa-icon>
+            <h5 class="mt-2">Products {{ productCount }}</h5>
+          </a>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <article
+          class="p-4 rounded shadow-sm border-left mb-4 d-flex justify-content-center align-items-center"
+        >
+          <a class="d-flex flex-column align-items-center">
+            <fa-icon [icon]="buyer" class="icon-size"></fa-icon>
+            <h5 class="mt-2">Buyer {{ buyerCount }}</h5>
+          </a>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <article
+          class="p-4 rounded shadow-sm border-left mb-4 d-flex justify-content-center align-items-center"
+        >
+          <a class="d-flex flex-column align-items-center">
+            <fa-icon [icon]="handshake" class="icon-size"></fa-icon>
+            <h5 class="mt-2">Sellers {{ sellerCount }}</h5>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <div
+      class="jumbotron jumbotron-fluid rounded bg-white border-0 shadow-sm border-left px-4"
+    >
+      <div class="container">
+        <h1 class="display-4 mb-2 text-dark">Recent Users</h1>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">FirstName</th>
+              <th scope="col">LastName</th>
+              <th scope="col">Address</th>
+              <th scope="col">Email</th>
+              <th scope="col">Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of recentUser">
+              <td>{{item.firstName}}</td>
+              <td>{{item.lastName}}</td>
+              <td>{{item.address}}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.role}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>

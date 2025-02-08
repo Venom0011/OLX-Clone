@@ -1,0 +1,35 @@
+
+<div class="container">
+
+ 
+<form [formGroup]="updateProductForm" (ngSubmit)="onSubmit()">
+  <div class="heading">
+  <h2>Add New Listing</h2>
+  </div>
+  <div>
+    <label for="productName">Product Name:</label>
+    <input id="productName" formControlName="productName">
+  </div>
+
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" formControlName="description"></textarea>
+  </div>
+
+  <div>
+    <label for="price">Price:</label>
+    <input id="price" type="number" formControlName="price">
+  </div>
+
+  <div>
+    <label for="addedDate">Added Date:</label>
+    <input id="addedDate" type="date" formControlName="addedDate">
+  </div>
+
+  <div>
+    <label for="file">Upload File:</label>
+    <input id="file" type="file" (change)="onFileChange($event)">
+  </div>
+
+  <button type="submit" [disabled]="updateProductForm.invalid">Update Product</button>
+</form>

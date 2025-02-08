@@ -1,0 +1,108 @@
+/* Overall container styling */
+.container {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .container:hover {
+    background: #f0f0f0;
+  }
+  
+  /* Form title styling */
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  
+  
+  .form-control, .form-control-file {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-control:focus, .form-control-file:focus {
+    border-color: #0e0e0e;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Submit button styling */
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #070707;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0a0a0a;
+    transform: scale(1.05);
+  }
+  
+  .btn-primary:focus {
+    outline: none;
+  }
+  
+  /* File input styling */
+  .form-control-file {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .form-control-file:hover {
+    border-color: #007bff;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .btn-primary {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+
+
+ 

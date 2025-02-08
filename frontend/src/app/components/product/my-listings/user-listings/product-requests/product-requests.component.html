@@ -1,0 +1,11 @@
+<div style="text-align: center;">
+    <h2><strong>Requests</strong></h2>
+    <br>
+</div>
+<div class="div1">
+    <div *ngFor="let buyer of buyers" >
+        <product-request-card [buyer] = "buyer"></product-request-card>
+    </div>   
+</div>
+
+

@@ -1,0 +1,109 @@
+.div1 {
+  margin: 15px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: 1px solid #ddd; Border color */
+  padding: 30px;
+  /* Padding inside the border */
+  border-radius: 8px;
+  /* Rounded corners for the border */
+  max-width: 100%;
+  /* Ensures the container doesn't overflow its parent */
+  margin: 0 auto;
+  /* Centers the container horizontally */
+  box-sizing: border-box;
+  /* Ensures padding and border are included in the width */
+  background: #fff;
+  /* 3D Shadow Effect */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+div {
+  margin: 10px;
+}
+
+h2 {
+  /* font-family: 'Times New Roman', Times, serif; */
+  font-size: 2em;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  cursor: pointer;
+  transition: 1s ease;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+.pointer {
+  cursor: pointer;
+}
+
+img {
+  min-height: 150px;
+}
+
+.card-container {
+  perspective: 1000px; /* Create 3D perspective */
+  display: inline-block;
+}
+
+.card {
+  width: 16rem;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  margin: 10px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("https://i.pinimg.com/originals/92/94/1d/92941d986586249ee79a24065f68c910.jpg");
+}
+
+.card-img-top {
+  width: 100%;
+  height: 12rem; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  color: #0a0a0a;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  color: #0f0f10;
+  font-family: "Times New Roman", Times, serif;
+}
+.price {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #0a0a0a;
+  border-color: #d9dee4;
+  color: #fff;
+  text-decoration: none;
+  width: 6rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+}

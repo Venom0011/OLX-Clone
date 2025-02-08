@@ -1,0 +1,52 @@
+<div style="text-align: center">
+  <h2><strong>Featured Listings on Website</strong></h2>
+  <br />
+</div>
+<div class="div1">
+  <div *ngFor="let product of products">
+    <div class="card">
+      <img
+        src="{{ product?.imageData | base64 : product.imageData }}"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ product?.productName }}</h5>
+        <h6 class="price">
+          {{ product?.price | currency : "INR" : "symbol" : "1.2-2" }}
+        </h6>
+
+        <button
+          class="btn {{ product.active ? 'btn-primary': 'btn-success' }}"
+        >
+          {{ product.active ? "Remaining" : "Sold" }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-end mr-5">
+     <li class="page-item pointer" [ngClass]="1==(currentPage$ | async)? ' disabled': ''" (click)="goToNextOrPreviousPage('backward')" >
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo; Previous</span>
+      </a>
+    </li>
+    <li class="page-item pointer" *ngFor="let item of [].constructor(productResponse.totalPages); let i=index;"
+    [ngClass]="i+1==(currentPage$ | async)? ' active': ''">
+        <a class="page-link" (click)="gotoPage(i+1)">
+            {{i+1}}
+        </a>
+    </li>
+   <li class="page-item pointer" [ngClass]="(productResponse.totalPages)==(currentPage$ | async)? ' disabled': ''" (click)="goToNextOrPreviousPage('forward')">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">Next &raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
+

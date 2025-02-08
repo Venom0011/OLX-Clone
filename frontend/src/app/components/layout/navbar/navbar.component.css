@@ -1,0 +1,249 @@
+/* Basic styles for the navbar */
+body,html{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #e74c3c !important;
+  }
+.navbar-brand{
+  cursor: pointer;
+}
+  .search{
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 70px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 40px;
+  padding: 10px;
+  }
+
+  .search_input{
+  color: rgb(10, 10, 10);
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  margin-top:5px;
+  caret-color:transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+  }
+
+  .search .search_input{
+  padding: 0 10px;
+  width: 550px;
+  caret-color:red;
+  transition: width 0.4s linear;
+  }
+  
+  .search:hover > .search_icon{
+  background: red;
+  color: #fff;
+  }
+
+  .search_icon{
+  height: 50px;
+  width: 50px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color:white;
+  background-color:black;
+  }
+  
+a:link{
+  text-decoration:none;
+}    
+
+.navbar {
+  padding: 1rem;
+  background-color: #25292d;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-brand h1 {
+  font-size: 50px;
+  font-weight: 600;
+  background-image: radial-gradient(circle, #4302f4, #ee992b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-brand img[src$="logo.png"] {
+  width: 65px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.navbar-menu li {
+  margin: 0 1rem;
+}
+
+.navbar-menu a {
+  color: rgb(13, 13, 13);
+  text-decoration: none;
+}
+
+.navbar-menu a.active {
+  text-decoration: underline;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+
+}
+
+.navbar-search input {
+  padding: 0.5rem;
+  border: solid black 2px;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.navbar-search button {
+  padding: 0.5rem 1rem;
+  border: black;
+  border-radius: 4px;
+  background-color: #2a7df1;
+  color: rgb(14, 13, 13);
+  cursor: pointer;
+}
+
+.navbar-search button:hover {
+  background-color: #2d2def;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .navbar-menu li {
+    margin: 0.5rem 0;
+  }
+
+  .navbar-search {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-search input {
+    width: 80%;
+    margin-right: 0;
+  }
+
+  .navbar-search button {
+    width: 100%;
+  }
+}
+
+
+
+
+/* search button */
+.form-inline {
+  display: flex;
+  justify-content: flex-end;
+  /* Align items to the right */
+  align-items: center;
+  /* Center vertically */
+}
+
+.form-control {
+  align-items: center;
+  width: 500px;
+}
+
+/* Optional: Adjust margin or padding as needed */
+.form-inline .btn {
+  margin-left: 10px;
+  position: absolute;
+  right: 0;
+  /* Add some space between input and button */
+}
+
+/* .profile-container {
+  /* margin-left: auto;
+  margin-left: 0; */
+  /* margin: auto; */
+  /* Pushes the profile container to the right */
+/* } */
+
+
+/* .profile-img :hover {
+  background-color: green;
+  color: #fff;
+} */
+.profile-img {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.profile-img:hover {
+  color: #f0f0f0;
+}
+
+
+.navbar-brand img {
+  /* width: 65px; */
+  /* Adjust width as needed */
+  /* height: auto; */
+  /* Maintain aspect ratio */
+  margin-right: auto;
+  /* Optional: Add some margin if needed */
+}
+
+.d-flex{
+  margin: auto;
+}
+
+.my-listings{
+  margin: 10px;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between; 
+  height: 100px;
+}

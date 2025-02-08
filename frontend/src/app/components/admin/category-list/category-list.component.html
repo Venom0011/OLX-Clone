@@ -1,0 +1,19 @@
+<div style="text-align: right; margin-top: 20px; margin-right: 20px;">
+    <button class="btn btn-secondary" (click)="openModal()">Add Category</button>
+</div>
+<div style="text-align: center;">
+  <br>
+    <h2><strong>Browse Categories</strong></h2>
+    <br>
+</div>
+
+<div class="home-container">
+  <section class="categories">
+    <div class="category-list">
+      <div *ngFor="let category of categories" class="category-card">
+        <img src="{{category.imageData | base64:category.imageData}}" alt="{{ category.name }}" />
+        <h3>{{ category.name }}</h3>
+      </div>
+    </div>
+  </section>
+</div>

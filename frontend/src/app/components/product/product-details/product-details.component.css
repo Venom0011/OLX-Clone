@@ -1,0 +1,124 @@
+.product-details-container {
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    /* background-image: url("https://i.pinimg.com/originals/92/94/1d/92941d986586249ee79a24065f68c910.jpg"); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+  }
+
+ 
+  .back-button {
+
+    top: 20px;
+    left: 20px;
+    z-index: 1000; 
+    background-color: black;
+
+    /* Ensure it's above other content */
+  }
+  .detailsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.926); */
+    margin: 5px;
+    border-radius: 8px;
+    
+
+  }
+  
+  .product-details-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 5px;
+    margin-left: 250px;
+    margin-right: 150px; /* Adjust based on the height of the back button */
+  }
+  
+  .product-image {
+    flex: 1;
+    min-width: 450px;
+    min-height: 500px;
+    margin-right: 50px;
+    object-fit: cover;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .product-info {
+    flex: 2;
+  }
+  
+  .product-info h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+  
+  .product-info{
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  p{
+    font-size: 20px;
+    max-width: 300px;
+    min-height: 250px;
+    line-height: 38x;
+  }
+  
+  .product-info h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+   .btn {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border: solid black 1px;
+    
+   
+  }
+
+  .contactBtn{
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border: solid black 1px;
+    min-width: 350px;
+    font-size: 20px;
+    border-radius: 6px;
+
+  }
+
+  .contactBtn:hover {
+    background-color: #f9fafc;
+    border-color: #0a0a0a;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .btn:hover {
+    background-color: #f9fafc;
+    border-color: #0a0a0a;
+    color: black;
+    font-weight: 500;
+  }
+
+  .back-button{
+    margin: 10px;
+  }
+  .fade.modal {
+   opacity: unset !important;
+}
+  

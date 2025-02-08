@@ -1,0 +1,33 @@
+<div style="text-align: center;">
+  <br>
+    <h2><strong>Browse Categories</strong></h2>
+    <br>
+</div>
+<div class="home-container">
+  <section class="categories">
+    <div class="category-list">
+      <div *ngFor="let category of categories" class="category-card">
+        <img src="{{category.imageData | base64:category.imageData}}" alt="{{ category.name }}" (click)="loadProductsByCategory(category.name)" />
+        <h3>{{ category.name }}</h3>
+      </div>
+    </div>
+  </section>
+</div>
+<div *ngIf="toggle == false">
+
+  <div class="categoryHeading">
+  <h2><strong>Showing Listings For '{{currentCategory}}' Category</strong></h2>
+  </div>
+  <div class="div1">
+<div *ngFor="let prod of products">
+  <product [product] = "prod"></product>
+</div>
+</div>
+</div>
+
+
+<div class="productList" *ngIf="toggle == true">
+  <products-container></products-container>
+</div>
+
+

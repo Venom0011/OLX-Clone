@@ -1,0 +1,12 @@
+<br>
+<br>
+<br>
+<div class="faq">
+    <h2>Frequently Asked Questions (FAQ) about OLX</h2>
+  
+    <div *ngFor="let faqItem of faqItems; let i = index" class="faq-item">
+      <div class="faq-question">{{ faqItem.question }}</div>
+      <div class="faq-answer" *ngIf="faqItem">{{ faqItem.answer }}</div>
+    </div>
+  </div>
+  
